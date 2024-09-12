@@ -1,0 +1,72 @@
+.messaggio
+{
+    max-width: 400px;
+    min-width: 400px;/* Imposta una larghezza massima, ad esempio il 100% del contenitore padre */
+    min-height: 45px;
+    background-color: rgba(136, 67, 67, 0.842);
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: -50px;
+    word-wrap: break-word; /* Assicura che il testo vada a capo se supera la larghezza massima */
+    display: inline-block; /* Permette al box di adattarsi al contenuto */
+}
+
+
+.messaggio-user 
+{
+    transform: translate(75px);
+    max-width: 400px;
+    min-width: 400px;/* Imposta una larghezza massima, ad esempio il 100% del contenitore padre */
+    min-height: 45px;
+    background-color: rgba(158, 138, 72, 0.842);
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: -50px;
+    word-wrap: break-word; /* Assicura che il testo vada a capo se supera la larghezza massima */
+    display: inline-block; /* Permette al box di adattarsi al contenuto */
+}
+
+.testo-messaggio
+{
+    display: block;
+    word-wrap: break-word;
+    margin-left: 50px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    max-width: 380px;
+    color: rgb(255, 240, 174);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    text-align: left;
+}
+
+.icona-messaggio
+{
+    transform: translate(30px, 28px);
+    border-radius: 9999px;
+    min-height: 45px;
+    max-height: 45px;
+    min-width: 45px;
+    max-width: 45px;
+    border-color: #B65757;
+    border-width: 4px;
+    border-style: inherit;
+    margin: -30px;
+}
+
+.nick-messaggio
+{
+    padding-left: 13%;
+    margin-top: 5%;
+    color: rgb(245, 158, 124);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    text-align: left;
+}
+
+.visibility
+{
+    visibility: visible;
+}

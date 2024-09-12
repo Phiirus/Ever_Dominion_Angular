@@ -1,0 +1,213 @@
+.card
+{
+    width: 360px;
+    max-width: 330px;
+    height: 65px;
+    background-image: url(https://i.imgur.com/bINv05N.png);
+    background-repeat: no-repeat;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+.scritte
+{
+    color: white;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    text-align: left;
+    padding-left: 30px;
+    text-shadow: black;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+
+.popup
+{
+    position: fixed;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: linear-gradient(to bottom, #444444, #303030);
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 202, 141); 
+    transform: translate(175px, 70px) scale(1);
+    visibility: hidden;
+    z-index: 9999;
+}
+.popup-profilo
+{
+    position: fixed;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: linear-gradient(to bottom, #444444, #303030);
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 202, 141); 
+    transform: translate(170px, 70px) scale(1);
+    visibility: hidden;
+    z-index: 9999;
+}
+
+.addFriend:hover ~ .popup
+{
+    
+    visibility: visible;
+    transform: translate(175px, 80px) scale(1);
+    transition-duration: 500ms;
+}
+.removeFriend:hover ~ .popup
+{
+    
+    visibility: visible;
+    transform: translate(175px, 80px) scale(1);
+    transition-duration: 500ms;
+}
+.profiloGiocatore:hover ~ .popup-profilo
+{
+    
+    visibility: visible;
+    transform: translate(170px, 80px) scale(1);
+    transition-duration: 500ms;
+}
+.scritte-popup
+{
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    text-align: center;
+    color: rgb(255, 202, 141); 
+    font-size: 70%;
+}
+
+.bg_icona
+{
+    position: fixed;
+    
+    border-radius: 9999px;
+    min-height: 65px;
+    max-height: 65px;
+    min-width: 65px;
+    max-width: 65px;
+    transform: translate(-12px,0px) scale(1.15);
+    border-color: #B65757;
+    border-width: 4px;
+    border-style: inherit;
+}
+
+.testo
+{
+    font-style: italic;
+    color: rgb(201, 189, 136);
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+}
+
+.popup-player
+{
+    position: fixed;
+    visibility: hidden;
+    height: 200px;
+    width: 370px;
+    transform: translate(10px,-25px) scale(0);
+    z-index: -5;
+    border: solid 3px black;
+    border-radius: 10px;
+    background-image: url(https://i.imgur.com/uwJVsg5.png);
+    opacity: 0;
+    /* transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; */
+}
+.visibility
+{
+    transform: translate(7px,-25px);
+    position: relative;
+    visibility: visible;
+    animation: dropdown 0.5s ease forwards;
+}
+.addFriend
+{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    transform: translate(290px, 51px);
+    z-index: 1000;
+}
+.addFriend:active
+{
+    margin-top: 5px;
+    filter: grayscale(30%) brightness(70%);
+}
+.profiloGiocatore:active
+{
+    margin-top: 5px;
+    filter: grayscale(30%) brightness(70%);
+}
+.fightButton:active
+{
+    margin-top: 5px;
+    filter: grayscale(30%) brightness(70%);
+}
+.removeFriend
+{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    transform: translate(290px, 51px);
+    z-index: 1000;
+}
+.removeFriend:active
+{
+    margin-top: 5px;
+    filter: grayscale(30%) brightness(70%);
+}
+
+.spada
+{
+    position: fixed;
+    transform: translate(-50px,-12px) scale(0.7);
+}
+.cuore
+{
+    position: fixed;
+    transform: translate(-37px,58px) scale(1);
+}
+
+/* .banner:hover ~ .popup-player
+{
+    transform: translate(7px,-25px);
+    position: relative;
+    visibility: visible;
+    animation: dropdown 0.5s ease forwards;
+}
+
+.banner ~ .popup-player.hide
+{
+    transform: translate(7px,-25px);
+    position: relative;
+    visibility: visible;
+    animation: dropup 0.5s ease forwards;
+}
+
+.popup-player:hover
+{
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(7px,-25px);
+} */
+
+
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        transform: translate(7px, -100px) scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(7px,-25px) scaleY(1);
+    }
+}

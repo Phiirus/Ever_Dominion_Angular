@@ -1,0 +1,23 @@
+.bottone_icona
+{
+    position: fixed;
+    transform: translate(0px, 10px) scale(1.4);
+    min-height: 65px;
+    max-height: 65px;
+    min-width: 65px;
+    max-width: 65px;
+    border-color: rgb(158, 87, 87); border-width: 3px;
+    border-style: groove;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.bg_icona
+{
+    border-radius: 9999px;
+    min-height: 65px;
+    max-height: 65px;
+    min-width: 65px;
+    max-width: 65px;
+    transform: translate(-5px,0px) scale(1);
+}

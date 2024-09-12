@@ -1,0 +1,131 @@
+.testo
+{
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    text-align: center;
+    color: rgb(255, 202, 141); 
+}
+.chat-bottone
+{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(49, 49, 49);
+    border-style: solid;
+    border-top-width: 3px;
+    border-left-width: 3px;
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    border-color: rgb(255, 202, 141); 
+    z-index: 9999;
+
+}
+
+.chatbox
+{
+    transform: translate(10px, 10px);
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    background-color: rgba(36, 36, 36, 0.911);
+    border: solid 3px rgb(255, 202, 141);
+    border-radius: 20px;
+    visibility: hidden;
+}
+.visibility
+{
+    visibility: visible;
+}
+.chat-form
+{
+    position: fixed;
+    margin-left: 10px;
+    height: 40px;
+    width: 380px;
+    border-radius: 20px;
+    background-color: rgb(112, 112, 112);
+}
+.input-form
+{
+    height: 40px;
+    width: 380px;
+    border-radius: 20px;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.message-box
+{
+    position: fixed;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 300px;
+    height: 200px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.grid-list
+{
+    flex-direction: column-reverse;
+    width: 500px;
+    max-width: 500px;
+    height: 535px;
+    max-height: 540px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+
+.messaggio
+{
+    width: 275px;
+    height: max-content;
+    min-height: 45px;
+    background-color: rgba(158, 138, 72, 0.842);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.testo-messaggio
+{
+    position: relative;
+    display: block;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 380px;
+    color: rgb(255, 240, 174);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}
+
+.icona-messaggio
+{
+    position: fixed;
+    
+    border-radius: 9999px;
+    min-height: 45px;
+    max-height: 45px;
+    min-width: 45px;
+    max-width: 45px;
+    border-color: #B65757;
+    border-width: 4px;
+    border-style: inherit;
+}
+
+.nick-messaggio
+{
+    margin-left: 10px;
+    color: rgb(245, 158, 124);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    text-align: left;
+}

@@ -1,0 +1,37 @@
+.playerDamageReceived
+{
+    position: fixed;
+    max-width: 130px;
+    max-height: 60px;
+    transform: translate(575px,250px);
+    border-color: rgb(255, 202, 141);
+    background-color: rgba(7, 7, 6, 0.8);
+    border-radius: 20px;
+    border-style: double;
+    border-width: 2px;
+
+
+    
+}
+.enemyDamageReceived
+{
+    position: fixed;
+    max-width: 130px;
+    max-height: 60px;
+    transform: translate(1240px,254px);
+    border-color: rgb(255, 202, 141);
+    background-color: rgba(7, 7, 6, 0.8);
+    border-radius: 20px;
+    border-style: double;
+    border-width: 2px;
+
+
+    
+}
+
+.damageText
+{
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    text-align: center;
+    color: rgb(255, 202, 141); 
+}

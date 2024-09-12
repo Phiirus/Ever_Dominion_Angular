@@ -1,0 +1,35 @@
+<button (click)="toggleButton()" [matBadge]="unreadCount()" matBadgeOverlap="true" matBadgeSize="large"
+    style="width: 30px; height: 30px;background-color: rgb(68, 68, 68);  border-radius: 9999px; border: solid 1px white; margin-right: -15px; margin-top: 4px; transform: scale(1.5); margin-left: 30px;">
+    <img src="https://i.imgur.com/sDdgXFQ.png" alt="" style="transform:translate(0px,-2px) scale(0.6) ;">
+  </button>
+
+  <div class="chatbox fixed" [style.visibility]="popup">
+    <div class="message-box">
+        <div class="grid-list">
+            <!-- Singola notifica -->
+            @if(notifications.length > 0)
+            {
+                <div class="messaggio" *ngFor="let notify of notifications">
+                    <div class="nick-messaggio">
+                        {{ notify.attacker.nick }}
+                    </div>
+                    <div class="testo-messaggio">
+                        {{ notify.result }}
+                    </div>
+                </div>
+            }
+            @else 
+            {
+                <div class="messaggio">
+                    <div class="nick-messaggio">
+                        System
+                    </div>
+                    <div class="testo-messaggio">
+                        Ancora nessuna notifica
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

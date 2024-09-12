@@ -1,0 +1,51 @@
+@if (player) 
+{
+    <body class="container">
+        <div class="pergamena">
+            <app-profile-card [player]="player"></app-profile-card>
+
+            <!-- SEZIONE UNITA' ED EQUIP EQUIPAGGIATI -->
+            <div class="b2">
+                <mat-grid-list class="equip-equip-container" cols="1" rowHeight="9.9rem">
+                    @for (gear of player.activeGears; track gear.id)
+                    {
+                        <mat-grid-tile class="equip-equip transition-all ease delay-100 duration-500  hover:scale-110 hover:border-6 border-4 bg-transparent h-25 float-left border-black hover:border-amber-600 z-0 hover:z-50 border-solid ">
+                            <button (mouseover)="mouseOveredGear(gear)" (mouseout)="mouseUnoverGear()" (click)="switchGearState(gear, true)">
+                                <img [src]="gear.icon" style="transform: scale(0.8); z-index: 1000;">
+                                <!-- <img src="https://i.imgur.com/E75AIJ7.png" class="sfondo-gear"> -->
+                            </button>
+                        </mat-grid-tile>
+                    }
+                </mat-grid-list>
+
+                <mat-grid-list class="equip-unita" cols="2" rowHeight="9.9rem">
+                    
+                    @for (troop of player.activeTroops; track troop.id) 
+                    {
+                        <mat-grid-tile>
+                            <button (click)="switchTroopState(troop, true)">
+                                <app-troop-card [troop]="troop"></app-troop-card>
+                            </button>
+                        </mat-grid-tile>
+                    }
+                </mat-grid-list>
+                <div class="spade-icon-bg"><img class="spade-icon" src="https://i.imgur.com/ednuChZ.png" alt=""></div>
+            </div>
+
+            <app-inventory-card 
+                [inventory]="true"
+                [storageTroops]="storageTroops" 
+                [storageGears]="storageGears" 
+                (switchTroopEvent)="switchTroopState($event, false)"
+                (switchGearEvent)="switchGearState($event, false)"
+                (customOverMouse)="mouseOveredGear($event)"
+                (customUnoverMouse)="mouseUnoverGear()">
+            </app-inventory-card>
+            
+        </div>
+        <app-gear-card [style.visibility]="overedGear ? 'visible' : 'hidden'" [gear]="overedGear!"></app-gear-card>
+    </body>
+}
+
+
+

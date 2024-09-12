@@ -1,0 +1,14 @@
+.sfondo
+{
+    min-height: 100vh;
+}
+
+.corpo
+{
+    background-color: transparent;
+    overflow: hidden;
+}
+
+audio {
+    display: none;
+  }

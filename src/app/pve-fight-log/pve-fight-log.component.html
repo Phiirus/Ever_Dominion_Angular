@@ -1,0 +1,13 @@
+<div class="message-box">
+    <h1 class="reg-bat ombra">REGISTRO BATTAGLIA</h1>
+    <div class="messages">
+        @for (message of results; track $index) 
+        {
+            <div class="message" [class]="cssClass(message)" [style.align-self]="messageAlign(message)">
+                <span class="textstyle">{{message}}</span>
+            </div>
+        }
+    </div>
+</div>
+
+<button class="bottone hover:bg-[url(https://i.imgur.com/WB1cXhE.png)]" (click)="fightButtonClicked()" [style.visibility]="buttonVisibility">COMBATTI</button>

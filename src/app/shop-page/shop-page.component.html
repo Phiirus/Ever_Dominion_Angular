@@ -1,0 +1,94 @@
+@if(player)
+{
+    <body class="container">
+        <div class="pergamena">
+        
+        <app-profile-card [player]="player"></app-profile-card>
+        
+        
+        <!-- SEZIONE UNITA' ED EQUIP EQUIPAGGIATI -->
+        <div class="b2">
+            
+            <mat-grid-list class="equip-equip-container" cols="1" rowHeight="9.9rem">
+                <mat-grid-tile class="">
+                    <div class="inventory-equip border-black border-solid border-4 transition-all ease delay-100 duration-500 hover:scale-110
+                         hover:border-6 bg-transparent h-25 float-left hover:border-amber-600 z-0 hover:z-50">
+                        <img  src="https://i.imgur.com/ZYi4hIb.png" style="transform: scale(2.3) translate(-7px,-2px);">
+                    </div>
+                    @if(player.stamina >= 3)
+                    {
+                        <div>
+                            <h2 class="goldCostNumberGear" style="text-align: center; transform: translate(0px, 50px) scale(1.5);" >Max</h2>
+                        </div>
+                    }
+                    @else
+                    {
+                        <button (click)="buyStamina()" class="bottoneBuyGear">
+                            <h2 class="goldCostNumberGear">{{player.stamina >= 3 ? "Max Stamina" : 20}}</h2>
+                        </button>
+                    }
+                </mat-grid-tile>
+                @for (gearInShop of gearsInShop; track gearInShop) 
+                {
+                    <mat-grid-tile class="">
+                        <div class="inventory-equip border-black border-solid border-4 transition-all ease delay-100 duration-500 hover:scale-110
+                             hover:border-6 bg-transparent h-25 float-left hover:border-amber-600 z-0 hover:z-50">
+                            <img  [src]="gearInShop.icon" style="transform: scale(1) translate(-13px,12px);"
+                             (mouseover)="mouseOveredGear(gearInShop)" (mouseout)="mouseUnoverGear()">
+                        </div>
+                        @if(playerHasGear(gearInShop) == null)
+                        {
+                            <h2 class="maxtier">Max Tier</h2>
+                        }
+                        @else
+                        {
+                            @if(playerHasGear(gearInShop))
+                            {
+                                <button (click)="upgradeGear(gearInShop.id)" class="bottoneBuyGear">
+                                    <h2 class="goldCostNumberGear"> {{playerHasGear(gearInShop) ? playerHasGear(gearInShop) : gearInShop.price}} </h2>
+                                </button>
+                            }
+                            @else 
+                            {
+                                <button (click)="buyGear(gearInShop.id)" class="bottoneBuyGear">
+                                    <h2 class="goldCostNumberGear"> {{playerHasGear(gearInShop) ? playerHasGear(gearInShop) : gearInShop.price}} </h2>
+                                </button>
+                            }
+                            <!-- <img class="goldCostGear" src="https://i.imgur.com/pdcKGOO.png" alt=""> -->
+                        }
+                    </mat-grid-tile>
+                }
+            </mat-grid-list>
+            
+            <div style="position: absolute;">
+                
+                <mat-grid-list class="equip-unita" cols="2" rowHeight="9.9rem">
+                    @for (troopInShop of troopsInShop; track troopInShop.id) 
+                    {
+                        <mat-grid-tile>
+                            <div class="truppe">
+                                <app-troop-card-idle [troopInShop]="troopInShop"></app-troop-card-idle>
+                                <button class="bottoneBuy" (click)="buyTroop(troopInShop.id)">
+                                    <h2 class="goldCostNumber" > {{troopInShop.price}} </h2>
+                                </button>
+                            </div>
+                            <!-- <img class="goldCost" src="https://i.imgur.com/pdcKGOO.png" alt=""> -->
+                        </mat-grid-tile>
+                    }
+            </mat-grid-list>
+            <div class="shop-icon-bg"><img class="shop-icon" src="https://i.imgur.com/VhuikVs.png" alt=""></div>
+            
+        </div>
+    </div>
+    <app-inventory-card
+        [inventory]="false" 
+        [storageTroops]="storageTroops" 
+        [storageGears]="storageGears"
+        [activeGears]="activeGears"
+        (customOverMouse)="mouseOveredGear($event)"
+        (customUnoverMouse)="mouseUnoverGear()"
+        (customSellTroop)="sellTroop($event)"></app-inventory-card>
+    </div>
+    <app-gear-card [style.visibility]="overedGear ? 'visible' : 'hidden'" [gear]="overedGear!"></app-gear-card>
+</body>
+}

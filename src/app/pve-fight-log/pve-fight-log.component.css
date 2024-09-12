@@ -1,0 +1,122 @@
+.message-box {
+    position: fixed;
+    transform: translate(-240px, -180px) scale(1.1);
+    background-repeat: no-repeat;
+    width: 485px;
+    height: 400x;
+    min-height: 377px;
+    background-image: url("https://i.imgur.com/DkfUCip.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.messages {
+    width: 370px;
+    height: 300px;
+    transform: translate(0px,14px);
+    overflow-y: scroll; /* Allows scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    display: flex;
+    flex-direction: column-reverse;
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* For Webkit browsers like Chrome and Safari */
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.attackerStyle
+{
+    
+    border-width: 3px;
+    border-color: darkcyan;
+    border-style: solid;
+}
+
+.defenderStyle
+{
+    opacity: 1;
+    border-width: 3px;
+    border-color: rgb(175, 35, 35);
+    border-style: solid;
+}
+
+.message {
+    
+    padding: 10px;
+    max-width: 25rem;
+    width: fit-content;
+    min-height: 2.8rem;
+    min-width: 20rem;
+    text-align: center;
+    margin: 2% 0;
+    background-image:url("https://i.imgur.com/1B4UMTQ.png") ;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(46, 33, 22, 0.8);
+}
+
+.textstyle
+{
+    color: black;
+    opacity: 1;
+    font-weight: 500;
+}
+
+.bottone {
+    position: fixed;
+    background-image: url("https://i.imgur.com/twgm68c.png");
+    top: calc(50% + 13rem);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 12rem;
+    height: 3rem;
+    transition: transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: rgb(201, 189, 136);
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    font-size: 125%;
+}
+
+.bottone:hover {
+    transform: translate(-50%, -10%);
+}
+
+.button-text {
+    transition: transform 0.1s ease;
+}
+
+.button-text:hover {
+    transform: scale(0.85);
+}
+
+.bottone:active {
+    background-image: url("https://i.imgur.com/WB1cXhE.png");
+    transform: translate(-50%, 10%);
+}
+
+.reg-bat
+{
+    position: absolute;
+    width: 1000px;
+    transform: translate(0px, -163px);
+    font-size: xx-large;
+    font-weight: 800;
+    font-size: 180%;
+    text-shadow: black;
+    text-align: center;
+    --tw-text-opacity: 1;
+    color: #FFD33B;
+}
+
+.ombra
+{
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}

@@ -1,0 +1,9 @@
+<div class="bg-[url(https://i.imgur.com/aTr03Fz.jpeg)]
+  sfondo bg-repeat bg-center w-full bg-cover h-full" >
+  <body class="corpo">
+    <app-navbar [player]="player"></app-navbar>
+    <router-outlet></router-outlet>
+    <app-chatbox style="z-index: 9999; position: fixed;" [style.visibility]="player ? 'visible' : 'hidden'" [player]="player"></app-chatbox>
+  </body>
+</div>
+

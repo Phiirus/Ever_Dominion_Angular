@@ -1,0 +1,22 @@
+.container
+{
+    height: 6rem;
+    width: 10.5rem;
+}
+
+.icon
+{
+    position: fixed;
+    margin-left: -1.5rem;
+}
+
+.statistiche
+{
+    text-align: center;
+}
+
+.numeri
+{
+    color: rgb(255, 196, 46);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}

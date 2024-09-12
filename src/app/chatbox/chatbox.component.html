@@ -1,0 +1,15 @@
+<button class="chat-bottone" (click)="toggle()">
+    <h1 class="testo">Chat</h1></button>
+<div class="chatbox" [class]="visibility()">
+
+    <div class="message-box">
+        @for (chat of chats; track $index) 
+        {
+           <app-chatbox-card style="margin-top: 10px;" [chat]="chat" ></app-chatbox-card>
+        }
+    </div>
+
+    <form [formGroup]="chatForm" class="chat-form" (ngSubmit)="sendMessage()">
+        <input type="text" class="input-form" formControlName="message">
+    </form>
+</div>

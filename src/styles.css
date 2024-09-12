@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face 
+{
+    font-family: "PixelifySans";
+    src: url('assets/fonts/static/PixelifySans-RegularImproved.ttf');
+}
+
+html, body 
+{ 
+    margin: 0; font-family: "PixelifySans";
+    height: 100%;
+}
+
+body
+{
+    background-color: floralwhite;
+    cursor: url('https://i.imgur.com/KUIo2VB.png'), auto;
+}
+
+button:hover
+{
+    cursor: url('https://i.imgur.com/KebHP4t.png'), pointer;
+}
+
+a:hover
+{
+    cursor: url('https://i.imgur.com/KebHP4t.png'), pointer;
+}
+
+
+

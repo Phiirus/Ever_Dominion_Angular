@@ -1,0 +1,42 @@
+.container 
+  {
+    position: relative;
+  }
+  
+  .image {
+    opacity: 0.5;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    top:10%;
+    text-align: center;
+    float: right    ;
+  }
+  
+  .container:hover .image {
+    opacity: 1;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    float:right;
+    padding: 5px;
+    padding-right: 20px;
+    padding-top: 35%;
+  }
+
+  .nome
+  {
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+  }

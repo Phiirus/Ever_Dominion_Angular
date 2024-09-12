@@ -1,0 +1,124 @@
+.eddai
+{
+    background-image:"https://i.imgur.com/Nt1kyYc.png" ;
+}
+
+.scritte 
+{
+    text-align: center;
+    text-shadow: white;
+    color: white;
+    font-size: larger;
+    font-weight: 800;
+    transition: font-size 0.3s ease; /* Aggiunta per una transizione fluida */
+}
+
+.logout:hover 
+{
+    color: #fa4242;
+    font-size: x-large; /* Aumenta la dimensione del testo al passaggio del mouse */
+}
+
+.home:hover 
+{
+    color: #61ffbd;
+    font-size: x-large; /* Aumenta la dimensione del testo al passaggio del mouse */
+}
+
+.friend:hover 
+{
+    color: #56b843;
+    font-size: x-large; /* Aumenta la dimensione del testo al passaggio del mouse */
+}
+
+.shop:hover 
+{
+    color: #FFD33B;
+    font-size: x-large; /* Aumenta la dimensione del testo al passaggio del mouse */
+}
+
+.player:hover 
+{
+    color: #c061ff;
+    font-size: x-large; /* Aumenta la dimensione del testo al passaggio del mouse */
+}
+
+.aboutus:hover 
+{
+    color: #5871ff;
+    font-size: x-large; /* Aumenta la dimensione del testo al passaggio del mouse */
+}
+
+.icona-immagine
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-image: url(https://i.imgur.com/S4Vs91H.png);
+    border-radius: 9999px;
+}
+
+.logo
+{
+    transform: translate(-40px,5px) scale(1.1);
+    width: auto;
+     height: 80px;
+    z-index: 100000;
+}
+
+.shield-bg
+{
+    width: 230px;
+    height: 68px;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, #2e2e2ebd, #1a1a1ab0);
+    transform: translate(-10px, -60px) scale(0.7);
+    border-style: double;
+    border-color: rgb(122, 73, 73);
+    border-width: 2px;
+}
+.shield
+{
+    transform: translate(-70px, -80px) scale(0.25);
+    position: relative;
+}
+
+.timer
+{
+    position: relative;
+    /* transform: translate(105px,21px) scale(1.5); */
+    transform: translate(120px,-205px) scale(1.5);
+    color: rgb(235, 170, 50);
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    z-index: 999;
+    max-width: 100px;
+}
+
+.popup-shield
+{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border-style: double;
+    border-width: 2px;
+    border-color: rgb(255, 202, 141);
+    background-color: rgba(7, 7, 6, 0.8);
+    transform: translate(0px, -111px) scale(0.1);
+    visibility: hidden;
+    z-index: 999;
+}
+
+.shield-bg:hover ~ .popup-shield
+{
+    visibility: visible;
+    transform: translate(0px, -58px) scale(1);
+    transition-duration: 500ms;
+    z-index: 9999;
+}
+.scritte-popup
+{
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    text-align: center;
+    color: rgb(255, 202, 141);  
+}

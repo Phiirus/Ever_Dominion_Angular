@@ -1,0 +1,131 @@
+.container
+{  
+    margin-top: 1%;
+    transform: translate(20px,5px);
+    width: 800px ;
+    background-repeat: no-repeat ;
+    background-image: url(https://i.imgur.com/bfc6Km7.png);
+    z-index: 1000;
+}
+
+.icona
+{
+    position: fixed;
+    transform: translate(50px, 27px) scale(1.5);
+    border-color: darkgoldenrod;
+    border-width: 3px;
+    border-style: groove;
+}
+
+.scritte
+{
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    color: rgb(207, 253, 146);
+    position: fixed;
+
+}
+
+.name
+{
+    position: fixed;
+    transform: translate(140px, 45px) scale(1.6);
+    font-weight: 800;
+    z-index: 900;
+}
+.spada
+{
+    transform: translate(145px,-45px) scale(0.15);
+    z-index: 20;
+}
+.dmg
+{
+    position: fixed;
+    transform: translate(295px, 50px) scale(1.7);
+    z-index: 900;
+    font-size: 80%;
+}
+.cuore
+{
+    transform: translate(236px,-307px) scale(0.09);
+    z-index: 20;
+}
+.vita
+{
+    position: fixed;
+    transform: translate(455px, 50px) scale(1.7);
+    z-index: 900;
+    font-size: 80%;
+}
+.status
+{
+  position: absolute;
+  transform: scale(1) translate(520px,-475px);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.status-circle-online 
+{
+  background: radial-gradient(circle, rgba(0,255,0,1) 0%, rgba(0,128,0,1) 100%);
+  box-shadow: 0 0 10px rgba(0,255,0,0.6);
+}
+
+.status-circle-offline 
+{
+  background: radial-gradient(circle, rgb(255, 0, 0) 0%, rgba(47,79,79,1) 100%);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.status-text-online {
+  position: fixed;
+  transform: translate(555px,-482px) scale(1.8);
+  color: rgba(0,255,0,1);
+}
+
+.status-text-offline {
+  position: fixed;
+  transform: translate(555px,-482px) scale(1.8);
+  color: rgb(255, 0, 0);
+}
+
+.unfriend
+{
+  transform: scale(0.3) translate(2150px, -1770px);
+  filter: hue-rotate(155deg) saturate(2) contrast(2) brightness(0.8);
+  z-index: 20;
+}
+.rimuoviamico:active
+{
+  margin-top: 5px;
+  filter: grayscale(30%) brightness(70%);
+}
+.popup
+{
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: linear-gradient(to bottom, #444444, #303030);
+  transform: translate(662px, -585px);
+  border-radius: 20px;
+  border-style: double;
+  border-color: rgb(122, 73, 73);
+  border-width: 2px;
+  visibility: hidden ;
+  z-index: 9999;
+}
+
+.test:hover .popup
+{
+  visibility: visible;
+  transition-duration: 500ms;
+}
+.scritte-popup
+{
+  color: rgb(251 191 36);
+  text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+  text-align: center;
+}

@@ -1,0 +1,320 @@
+.container
+{
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    height: 90;
+    margin-top: 5px;
+    margin-left: 17%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: auto;
+    z-index: 49;
+}
+.pergamena
+{
+    background-image: url(https://i.imgur.com/5v0OkvQ.png);
+    transform: translate(0px,-50px) scale(0.90);
+    background-repeat: no-repeat;
+    width: 1500px;
+    height: 910px;  
+}
+.b1
+{
+    position: fixed;
+    transform: translate(75px,65px) scale(1);
+    background-image: url(https://i.imgur.com/o79Sivr.png);
+    width: 350px;
+    height: 500px;
+    
+}
+
+.b2
+{
+    position: fixed;
+    transform: translate(420px,5px) scale(1);
+    float: left;
+    background-image: url(https://i.imgur.com/e7h467C.png);
+    width: 670px;
+    height: 500px;
+    margin: 2%;
+    margin-top: 4%;
+}
+.b3
+{
+    position: fixed;
+    transform: translate(58px,620px) scale(1.03 );
+    background-image: url(https://i.imgur.com/gNgoUFo.png);
+    background-repeat: no-repeat;
+    width: 1010px;
+    height: 249px;
+    margin-top: -30px ;
+    margin-left: 32px;
+    margin-right: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: rgba(255, 0, 0, 0.185);   
+}
+
+
+.scatola
+{
+    transform: translate(-100px,40px);
+}
+
+.bottone_icona
+{
+    position: fixed;
+    transform: translate(40px, 45px) scale(1.8);
+    min-height: 65px;
+    max-height: 65px;
+    min-width: 65px;
+    max-width: 65px;
+    border-color: darkgoldenrod; border-width: 3px;
+    border-style: groove;
+    background-color: transparent;
+    overflow: hidden;
+}
+.bg_icona
+{
+    border-radius: 9999px;
+    min-height: 65px;
+    max-height: 65px;
+    min-width: 65px;
+    max-width: 65px;
+    transform: translate(-5px,0px) scale(1);
+}
+.name_ribbon
+{
+    position: fixed;
+    margin-left: 100px;
+    transform: translate(28px,55px);
+
+}
+.nome
+{
+    position: fixed;
+    min-width: 200px;
+    max-width: 200px;
+    color:  #FFD33B;
+    padding-top: 10px;
+    transform: translate(230px, 10px) scale(0.85);
+    text-align: center;
+}
+.ruolo
+{
+    position: fixed;
+    transform: translate(285px, 80px) scale(0.7);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.email
+{
+    position: fixed;
+    min-width: 370px;
+    max-width: 370px;
+    transform: translate(140px, 120px) scale(0.6);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.statistiche-player-box
+{
+    position: fixed ;
+    transform: translate(10px, 160px);
+    width: 329px;
+    height: 325px;
+    border-style: solid;
+    border-top-width: 5px ;
+    border-color: rgb(82, 41, 8);
+}
+
+.ombra
+{
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}
+
+.stamina
+{
+    width: 314px;
+    height: 30px;
+}
+
+.stamina-icon
+{
+    transform: scale(1);
+    z-index: 100;
+}
+.stamina-icon-bw
+{
+    transform: translate(0px, 12px) scale(0.8);
+    z-index: 100;
+}
+
+.fine-stamina
+{
+    position: fixed ;
+    width: 314px;
+    height: 235px;
+    border-style: solid;
+    border-top-width: 5px ;
+    border-color: rgb(114, 68, 23);
+}
+
+.img-gold
+{
+    position: fixed;
+    transform: translate(50px,-10px);
+}
+
+.gold{
+    position: fixed;
+    transform: translate(180px,55px) scale(2);
+    color: rgb(255, 235, 184);
+
+}
+.spada
+{
+    position: fixed;
+    transform: translate(20px,120px);
+}
+
+.cuore
+{
+    position: fixed;
+    transform: translate(170px,136px) scale(1.7);
+}
+
+.mindmg
+{
+    position: fixed;
+    transform: translate(105px,125px) scale(2);
+    color: rgb(255, 170, 155);
+}
+
+.maxdmg
+{
+    position: fixed;
+    transform: translate(100px,160px) scale(2);
+    color: rgb(255, 131, 109);
+}
+
+.vita
+{
+    position: fixed;
+    transform: translate(250px,138px) scale(2);
+    color: rgb(207, 253, 146);
+}
+
+.equip-equip
+{
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border-width: 3px;
+    border-color: rgb(179, 127, 60);
+    margin-top: 50px;
+    margin-left: 45px;
+}
+
+.equip-equip-container
+{
+    width: 175px;
+    height: 470px;
+    margin-left: 10px;
+}
+
+.equip-unita
+{
+    position: fixed;
+    transform: translate(155px, -510px);
+    border-left: rgb(82, 41, 8);
+    border-style: solid;
+    border-left-width: 4px;
+    width: 475px;
+    height: 500px;
+    margin-left: 25px;
+}   
+
+.inventory-equips
+{
+    position: fixed;
+    width: 300px;
+    height: 225px;
+    max-height: 225px;
+    margin-left: -15px;
+    margin-top: -35px;
+    margin-top: -35px;
+    transform: translate(0px,47px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    
+}
+
+.inventory-equip
+{
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+    max-height: 100px;
+    border-radius: 100px;
+    border-width: 3px;
+    border-color: rgb(179, 127, 60);
+    padding-left: 25px;
+    transform: translate(50px,0px);
+}
+
+.inventory-units
+{
+    position: fixed;
+    width: 700px;
+    height: 225px;
+    max-height: 225px;
+    margin: 10px;
+    transform: translate(300px,2px);
+    border-left: rgb(82, 41, 8);
+    border-style: solid;
+    border-left-width: 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.spade-icon-bg
+{
+    position: fixed;
+    background-image: url(https://i.imgur.com/uHrN03f.png);
+    height: 4rem ;
+    width: 4rem;
+    transform: translate(1409px, 80px) scale(1.05);
+    z-index: 500;
+    background-repeat: no-repeat ;
+}
+
+.spade-icon
+{
+    transform: translate(-3px, -6px) scale(0.50);
+}
+
+.baule-icon-bg
+{
+    position: fixed;
+    background-image: url(https://i.imgur.com/uHrN03f.png);
+    height: 4rem ;
+    width: 4rem;
+    transform: translate(1407px, 545px) scale(1.08);
+    z-index: 500;
+    background-repeat: no-repeat ;
+}
+
+.baule-icon{
+    transform: translate(-3px, -2px) scale(0.58);
+}
+
+
+

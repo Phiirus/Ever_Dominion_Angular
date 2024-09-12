@@ -1,0 +1,39 @@
+@if (fightRes.victory) 
+{
+  <div class="overlay">
+    <div class="image-container">
+      <img src="https://i.imgur.com/iOrUCe4.png" alt="" style="position: fixed; transform: translate(170px,-5px);">
+      <div class="message scritte">HAI VINTO!</div>
+      <img class="castle" src="https://i.imgur.com/67evHm2.png"/>
+      <div class="reward-container">
+        <span class="reward-text scritte">+{{fightRes.gold}}</span>
+        <img src="https://i.imgur.com/91s7uYq.png" alt="" style="transform: translate(10px,-15px);">
+        <!-- <img class="reward" src="https://i.imgur.com/fmWY0nm.gif"/> -->
+        <button class="return" (click)="homeButton()" class="scritte login-button transform rounded-smpy-2 font-bold hover:bg-[url(https://i.imgur.com/WB1cXhE.png)];">
+          <img src="https://i.imgur.com/igoduSd.gif" alt="" style="position: fixed; transform: translate(-25px,-60px) scale(0.8)">
+          <img src="https://i.imgur.com/igoduSd.gif" alt="" style="position: fixed; transform: translate(85px,-60px) scale(0.8)">
+          HOME
+        </button>
+      </div>
+    </div>
+  </div>
+} 
+@else
+{
+  <div class="overlay">
+    <div class="image-container">
+      <div class="message">HAI PERSO</div>
+      <img class="castle" src="https://i.imgur.com/ZNjo1F1.png"/>
+      <div class="reward-container">
+        <span class="reward-text scritte">-{{fightRes.gold}}</span>
+        <img src="https://i.imgur.com/91s7uYq.png" alt="" style="transform: translate(10px,-15px);">
+        <!-- <img class="reward" src="https://i.imgur.com/fmWY0nm.gif"/> -->
+        <button class="return" (click)="homeButton()" class="scritte login-button transform rounded-smpy-2 font-bold hover:bg-[url(https://i.imgur.com/WB1cXhE.png)]">
+          <img src="https://i.imgur.com/fmWY0nm.gif" alt="" style="position: fixed; transform: translate(-25px,-60px) scale(0.8)">
+          <img src="https://i.imgur.com/fmWY0nm.gif" alt="" style="position: fixed; transform: translate(85px,-60px) scale(0.8)">
+          HOME
+        </button>
+      </div>
+    </div>
+  </div>
+}

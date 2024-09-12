@@ -1,0 +1,33 @@
+@if (player) 
+{
+<div class="b1">
+    <!-- IMG -->
+     <button (click)="changeIconView()" class="bottone_icona rounded-full transition-all ease delay-100 duration-150 hover:-translate-y-0.5 hover:scale-110 z-50">
+        <img [src]="player.icon" class="bg_icona" 
+        style="border-radius: 9999px; min-height: 65px; min-width: 65px; "
+        alt="icona">
+     </button>
+    <!-- <img src="https://i.imgur.com/9SosBgT.png" 
+        class="rounded-full  h-14 w-14 float-right transition-all ease delay-100 duration-150 hover:-translate-y-0.5 hover:scale-110 z-50" 
+        style="transform: translate(-250px, 45px) scale(1.8); border-color: darkgoldenrod; border-width: 3px; border-style: groove;" > -->
+    <img src="https://i.imgur.com/HVdsWFS.png" class="name_ribbon">
+        
+        <!-- DATI USER DX -->
+        <div class="scatola ombra text-4xl font mb-3 font-extrabold text-center fixed" >
+            <h1 class="nome">{{user.username.toLowerCase()}}</h1>
+            <h2 class="ruolo">{{user.role}}</h2>
+            <h2 class="email">{{user.email.toLocaleLowerCase()}}</h2>
+        </div>
+
+        <div class="statistiche-player-box">
+            @if (!changeIcon) 
+            {
+                <app-profile-card-stat [player]="player"></app-profile-card-stat>
+            }
+            @else 
+            {
+                <app-profile-card-icon (swapIconEmitter)="swapIcon($event)" ></app-profile-card-icon>
+            }
+        </div>
+</div >
+}

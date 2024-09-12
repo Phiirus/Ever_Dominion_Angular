@@ -1,0 +1,175 @@
+.container 
+{
+    position: fixed;
+    background-image: url(https://i.imgur.com/hIB7AuF.png);
+    margin-top: 9%;
+    width: 940px;
+    height: 608px;
+    transform: scale(1.2) translate(0px, -70px);
+    overflow-x: hidden; /* Nasconde lo scorrimento orizzontale */
+    overflow-y: scroll; /* Abilita lo scorrimento verticale */
+    scrollbar-width: none;
+}
+
+button 
+{
+    width: 100%; /* Imposta il pulsante alla larghezza del contenitore */
+    background: none; /* Rimuove lo stile di default del pulsante */
+    border: none; /* Rimuove il bordo di default del pulsante */
+    padding: 0; /* Rimuove il padding di default */
+}
+
+.info
+{
+    display: flex;
+    justify-content: center; /* Centra verticalmente il contenuto */
+    align-items: center; /* Centra orizzontalmente il contenuto */
+    text-align: center; /* Centra il testo all'interno dell'elemento */
+    padding: 15px; /* Aggiunge un po' di spazio interno */
+    border: 1px solid white; /* Bordo bianco */
+    font-size: larger;
+    font-weight: bold;
+}
+
+.description
+{
+    text-align: center; /* Centra il testo all'interno dell'elemento */
+    padding: 15px; /* Aggiunge un po' di spazio interno */
+    border: 1px solid white; /* Bordo bianco */
+}
+
+.reward
+{
+    color: #da9f1f;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    text-align: center;
+    font-weight: 600;
+    transform: translate(720px, -45px);
+    width: 100px;
+    
+}
+
+.img-gold
+{
+    position: fixed;
+    transform: translate(-43px, -70px) scale(0.7);
+}
+
+.pve-card
+{
+    position: relative;
+    transform: scale(0.9);
+    border-radius: 30px ;
+    /* background-image: url(https://i.imgur.com/DXvWXU8.png); */
+}
+.pve-icon
+{
+    position: fixed;
+    transform: scale(0.13) translate(-2530px, -2730px);
+    border-radius: 1000px;
+    border-style: solid;
+    border-width: 20px;
+    border-color: rgb(87, 59, 22);
+}
+.pve-scritte1
+{
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    z-index: 1000;
+    max-height: 124px;
+    transform: translate(0px);
+}
+.pve-scritte2
+{
+    position: fixed;
+    min-height: 123px;
+    max-height: 100px;
+    min-width: 425px;
+    max-width: 425px;
+    transform: translate(275px, -115px);
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+    text-align: center;
+    font-weight: 600;
+    border-right: rgb(82, 41, 8) 3px solid;
+    border-left: 3px rgb(82, 41, 8) solid;
+}
+
+.bordo
+{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+}
+.nome-pve
+{
+    transform: translate(38px,45px) scale(1.4);
+    max-width: 100px;
+     z-index: 9999;
+      color: rgb(255, 255, 255);
+}
+
+.ribbon-pve
+{
+    position: fixed;
+    transform: translate(260px,-50px) ;
+    z-index: 999;
+    
+}
+
+.campagna
+{
+    position: fixed;
+    transform: translate(400px,-50px);
+    text-align: left;
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    font-weight: 800;
+    color: #FFD33B;
+    font-size: xx-large;
+    font-size: 200%;
+    text-align: center;
+    z-index: 9999;
+
+}
+
+.spada
+{
+position: fixed;
+transform: translate(150px,-130px) scale(0.4);
+}
+
+.cuore
+{
+    position: fixed;
+    transform: translate(160px,-70px) scale(0.7);
+}
+
+.popup
+{
+    color: azure;
+    position: fixed;
+    background-color: rgba(7, 7, 6, 0.8);
+    pointer-events: none;
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 1000;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 202, 141); 
+    overflow-y: hidden;
+    visibility: hidden;
+    scrollbar-width: none;
+    transform: translate(0px,-70px);
+}
+
+.campagna:hover ~ .popup
+{
+    visibility: visible;
+    z-index: 9999;
+}
+.scritte-popup
+{
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+    text-align: center;
+    color: rgb(255, 202, 141);  
+}

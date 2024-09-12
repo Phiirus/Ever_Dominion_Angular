@@ -1,0 +1,89 @@
+<div style="height: 90px; width: 1600px;"></div>
+<img class="h-24 w-screen" alt="" style="border-bottom-width: 3px; border-bottom-color: darkgoldenrod; position: fixed;
+      transform: translate(0px,-90px); background-color: #03080F;">
+<nav class="h-24"
+      style="border-bottom-width: 3px; border-bottom-color: darkgoldenrod; position: fixed; background-color: #03080F;
+      transform: translate(0px,-90px); width: 1920px; z-index: 1000;">
+    <div class="eddai mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"  style="padding-top: 10px;">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" 
+                  aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-between">
+          <div class="flex flex-1 justify-between items-center" style="margin-left: 25px;">
+            <div class="flex space-x-4" style="margin-top: 7px; margin-left: -80px;">
+              <!-- Right-aligned navigation -->
+              @if (authService.isLogged()) 
+              {
+                <app-bell></app-bell>
+              }
+              <a [routerLink]="['home']" class="scritte home rounded-md px-3 py-2 text-sm font-medium text-gray-300  hover:text-white" aria-current="page" style="padding-left: 50px;">Home</a>
+              <a [routerLink]="['shop']" class="scritte shop rounded-md px-3 py-2 text-sm font-medium text-gray-300  hover:text-white">Negozio</a>
+              <a [routerLink]="['player']" class="scritte player rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-white">Profilo</a>
+              <a [routerLink]="['friendlist']" class="scritte friend rounded-md px-3 py-2 text-sm font-medium text-gray-300  hover:text-white" aria-current="page">Amici</a>
+              <a [routerLink]="['aboutus']" class="scritte aboutus rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-white">Info</a>
+              @if (authService.isLogged()) 
+              {
+                <a [routerLink]="['login']" (click)="logout()"  class="scritte logout rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-white">Logout</a>
+              }
+              <!-- Additional right-aligned icons -->
+            </div>
+            <div class="flex space-x-4">
+              <!-- Left-aligned navigation -->
+              <div class="flex items-center">
+                <button [routerLink]="['home']" style="transform: translate(250px);">
+                  <img class="logo" src="https://i.imgur.com/qVzSN1P.png"  alt="Ever Dominion">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fixed inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" style="margin-top: 5px; transform: translate(-1300px);">
+          <div class="relative ml-3">
+            <div>
+                <button type="button" [routerLink]="['/player']"  
+                        class=" relative rounded-full bg-gray-800 text-sm hover:outline-none hover:ring-4 hover:ring-yellow-600 " 
+                        id="user-menu-button" aria-expanded="false" aria-haspopup="true"
+                        style="transform: translate(15px, 7px); width: 60px; height: 60px; max-width: 60px; max-height: 60px;">
+                  
+                    <img class="eddai rounded-full" style="width: 60x;height: 60px;" 
+                    [src]="player ? player.icon : 'https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png'">
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @if(shieldVisibility)
+    {
+      <div class="shield-bg ">
+        <img src="https://i.imgur.com/Cut151A.png"  class="shield" alt="">
+        <h2 class="timer">{{(timeRemaining?.hours! < 10 ? "0"+timeRemaining?.hours : timeRemaining?.hours) +" : "+ (timeRemaining?.minutes! < 10 ? "0"+timeRemaining?.minutes : timeRemaining?.minutes) + " : " + (timeRemaining?.seconds! < 10 ? "0"+timeRemaining?.seconds : timeRemaining?.seconds)}}</h2>
+      </div>
+      <div class="popup-shield">
+        <h1 class="scritte-popup" style="padding-top: 10px;">Scudo attivo</h1>
+        <h2 class="scritte-popup">Mentre lo scudo è attivo non puoi essere attaccato.</h2>
+        <h2 class="scritte-popup">Attenzione! Attaccando un altro giocatore lo perderai!</h2>
+      </div>
+    }
+</nav>

@@ -1,0 +1,89 @@
+<div class="banner" style="margin-top: 20px; transform: translate(8px); z-index: 10;"> 
+    <button id="popup-switch" (click)="toggle()" style="max-width: 325px; transform: translate(25px,10px);">
+        <div class="card">
+            <img [src]="leadPlayer.icon" class="bg_icona" 
+            style="border-radius: 9999px; min-height: 65px; min-width: 65px; "
+            alt="icona">
+            @if (leadPlayer.hasShield) 
+            {
+                <img src="https://i.imgur.com/Cut151A.png" 
+                    style="position: fixed;transform: translate(-165px,-105px) scale(0.1);">
+            }
+            <img style="transform: translate(275px,5px) scale(0.7);" src="https://i.imgur.com/VlJDHT9.png" alt="">
+            <h1 class="scritte ombra float-start" style="position: fixed; display: inline; transform: translate(30px, -38px); color: rgb(255, 174, 0);">
+                @if(powerAdjuster() == 1)
+                {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{power}} 
+                }
+                @if(powerAdjuster() == 2)
+                {
+                    &nbsp;&nbsp;&nbsp;&nbsp;{{power}}
+                }
+                @if(powerAdjuster() == 3)
+                {
+                    &nbsp;&nbsp;{{power}}
+                }
+                @if(powerAdjuster() == 4)
+                {
+                    {{power}}
+                }
+            </h1>
+            <h1 class="scritte ombra float-start" style="position: fixed; display: inline; transform: translate(-125px, -38px); font-size: 150%;">
+                {{leadPlayer.nick.toUpperCase()}}
+            </h1>
+        </div>
+    </button>
+</div>
+<div id="popup" class="popup-player transition-all ease delay-100 duration-500" [class]="visibility()" >
+    <img src="https://i.imgur.com/j6Uu4u5.png" alt="" style="position: fixed;transform: translate(165px,-15px) scale(0.85);">
+    <div style="position: fixed; font-size: 200%; transform: translate(50px,50px);">
+        <img src="https://i.imgur.com/SrkMwdB.png" class="spada size-14 mt-2 mr-0.5" alt="">
+        <img src="https://i.imgur.com/2FDQE3U.png" class="cuore size-8  mr-1" alt="">
+        <span class="scritte-popup" style="color: rgb(255, 170, 155);">{{leadPlayer.playerMinDmg}} - </span> <span class="scritte-popup" style="color: rgb(255, 170, 155);"> {{leadPlayer.playerMaxDmg}} </span> 
+        <h1 class="scritte-popup" style="color: rgb(207, 253, 146); transform: translate(0px,10px);">{{leadPlayer.playerHealth}}</h1>
+    </div>
+    
+    <!-- FIGHT BUTTON -->
+    @if (leadPlayer.id!=playerId) 
+    {
+        @if (!leadPlayer.hasShield) 
+        {
+            <button class="fightButton" (click)="interact()" style="transform: scale(0.8) translate(215px,130px); position: fixed;">
+                <img src="https://i.imgur.com/tepODep.png" alt="">
+                <h1 class="testo" style="transform: translate(0px,-62px); font-size: 180%;">ATTACCA</h1>
+            </button>
+        }
+        @else 
+        {
+            <img src="https://i.imgur.com/tepODep.png" alt=""  style="position: fixed;transform: scale(0.8) translate(215px,130px); filter: grayscale(30%) brightness(70%); ">
+            <img src="https://i.imgur.com/Cut151A.png"  class="shield" alt="" style="position: fixed; transform: translate(85px,-50px) scale(0.12);">
+        }
+    }
+    
+    <!-- OTHER PROFILE BUTTON -->
+    <button (click)="playerProfile()" class="profiloGiocatore" style="transform: translate(200px,16px) scale(0.45); position: fixed;">
+        <img src="https://i.imgur.com/TpRfPaN.png" alt="" style="transform: scale(2);">
+        <img src="https://i.imgur.com/hgS7EPf.png" alt="" style="transform: translate(-15px,-65px) scale(0.8); z-index: 10;">
+    </button>
+    
+    @if(checkIfNotFriend())
+    {
+        <button class="addFriend" (click)="addFriend()">
+            <img src="https://i.imgur.com/TpRfPaN.png" alt="" style="transform: scale(2.3);">
+            <img src="https://i.imgur.com/rg36R4Y.png" alt="" style="z-index: 10; transform: translate(0px,-24.5px) scale(1.5);">
+        </button>
+    }
+    @else 
+    {
+        <button class="removeFriend" (click)="removeFriend()" style="transform: translate(290px, 56px) scale(1.3);">
+            <img src="https://i.imgur.com/nR89baH.png" alt="" style="transform: scale(2.3);">
+            <img src="https://i.imgur.com/kLFjvIQ.png" alt="" style="z-index: 10; transform: translate(0px,-24.5px) scale(1.2);filter: hue-rotate(155deg) saturate(2) contrast(2) brightness(0.8);">
+        </button>
+    }
+    <div class="popup">
+        <h1 class="scritte-popup">Aggiungi/rimuovi amico</h1>
+    </div>
+    <div class="popup-profilo">
+        <h1 class="scritte-popup">Profilo giocatore</h1>
+    </div>
+</div>  

@@ -1,0 +1,61 @@
+<div class="baule-icon-bg"><img class="baule-icon" src="https://i.imgur.com/k8VYYOR.png" alt=""></div>    
+<div class="b3">
+    <mat-grid-list cols="2" rowHeight="115px" class="inventory-equips">
+
+        @if (inventory)
+        {
+            <mat-grid-tile>
+                <button (click)="goToShop()" class="plus-gear transition-all ease delay-100 duration-500   border-4 bg-transparent float-left border-black hover:border-amber-600 z-0  border-solid " >
+                    <div class="plus-gear-bg"></div>
+                </button>
+            </mat-grid-tile>
+        }
+        @else 
+        {
+            @for (gear of activeGears; track gear) 
+            {
+                <mat-grid-tile class="inventory-equip transition-all ease delay-100 duration-500  hover:scale-110 hover:border-6 border-4 bg-transparent h-25 float-left border-black hover:border-amber-600 z-0 hover:z-50 border-solid ">
+                    <button (click)="callGearEvent(gear)" (mouseover)="callOverGear(gear)" (mouseout)="callUnoverGear()">
+                        <img [src]="gear.icon" style="transform: scale(0.8);">
+                    </button>
+                </mat-grid-tile>
+            }
+        }
+
+        @for (gear of storageGears; track gear) 
+        {
+            <mat-grid-tile class="inventory-equip transition-all ease delay-100 duration-500  hover:scale-110 hover:border-6 border-4 bg-transparent h-25 float-left border-black hover:border-amber-600 z-0 hover:z-50 border-solid ">
+                <button (click)="callGearEvent(gear)" (mouseover)="callOverGear(gear)" (mouseout)="callUnoverGear()">
+                    <img [src]="gear.icon" style="transform: scale(0.8);">
+                </button>
+            </mat-grid-tile>
+        }
+    </mat-grid-list>
+
+    <mat-grid-list cols="3" rowHeight="155px" class="inventory-units">
+
+        @if (inventory)
+        {
+            <mat-grid-tile>
+                <a (click)="goToShop()" class="plus-troop transition-all ease delay-100 duration-500   border-4 bg-transparent h-25 float-left border-black hover:border-amber-600 z-0  border-solid " >
+                    <div class="plus-troop-bg"></div>
+                </a>
+            </mat-grid-tile>
+        }
+
+        @for (troop of storageTroops; track troop) 
+        {
+            <mat-grid-tile>
+                <button (click)="callTroopEvent(troop)">
+                    <app-troop-card-idle [troop]="troop"></app-troop-card-idle>
+                </button>
+                @if (!inventory) 
+                {
+                    <button (click)="sellTroop(troop.id)" class="bottoneBuy">
+                        <h2 class="goldCostNumber" >{{troopPrice(troop)}}</h2>
+                    </button>
+                }
+            </mat-grid-tile> 
+        }
+    </mat-grid-list>
+</div>

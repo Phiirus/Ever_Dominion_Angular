@@ -1,0 +1,74 @@
+@if(pvePlayer)
+{
+    <div class="container" >
+        <!-- fare due card una per attacco che cambia in un colore se in attacco
+        o in un altro se si è in difesa se hoverato -->
+        <div class="z-0 bg-[url(https://i.imgur.com/baMc0mH.png)] hover:text-white transition-all ease delay-100 duration-500 hover:-translate-y-1 hover:scale-110  max-w-sm rounded overflow-hidden shadow-lg" 
+        style=" border-width: 5px; border-color: #07031b; border-radius: 30px; border-style: solid;">
+            <div class="py-4 px-8 bg-[url(https://i.imgur.com/UjN01WZ.png)] bg-repeat min-h-20" style="border-bottom-width: 3px; border-bottom-color: goldenrod;">
+                        
+                        <!-- <div>
+                            Combat Icon
+                            <img [src]="setCombatIcon(pvePlayer.onAttack)" class=" float-right size-14 mr-8" style=" transform: rotate(180deg);"> 
+                        </div> -->
+                
+                        <!-- nick -->
+                <div class="bg-[url(https://i.imgur.com/Qxom8K0.png)] bg-no-repeat bg-cover w-80   z-10  " style="transform: translateX(-25px) scaleX(1.2); min-height: 4.0625rem;" >
+                        <a class="nome text-4xl font mb-3 font-extrabold text-center" style="color: white">
+                        <h1 style="padding-top: 10px; transform: scaleX(0.9);">{{pvePlayer.nick.toLocaleUpperCase()}}</h1>
+                    </a>
+                    <!-- icon -->
+                </div>
+                
+            </div>
+            <!-- 2° paragrafo -->
+            <div class="text-2xl min-h-40 font mb-3 font-extrabold text-amber-600 text-left w-96" style="transform: translate(0px,15px);">
+                <mat-grid-list cols="4" rowHeight="3rem" class="bg-[url(https://i.imgur.com/hDQMJY2.png)] bg-no-repeat " >
+                    
+                    <mat-grid-tile></mat-grid-tile>    <!--  RIGA VUOTA -->
+                    
+                    <img [src]="pvePlayer.icon" 
+                    class="rounded-full  h-14 w-14 float-right transition-all ease delay-100 duration-150 hover:-translate-y-0.5 hover:scale-110 z-50" 
+                    style="transform: translate(-290px, 23px) scale(1.6); border-color: darkgoldenrod; border-width: 3px; border-style: groove; z-index: 9999;" >
+                    
+                    <!-- DAMAGE -->
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <img src="https://i.imgur.com/SrkMwdB.png" class=" size-10 mt-2 mr-0.5">
+                    </mat-grid-tile>
+                    
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <h4 style="transform: translate(0px,5px);"> 
+                            <span class="nome" style="color: rgb(255, 170, 155);font-size: 70%;">{{pvePlayer.pveMinDmg}}-{{pvePlayer.pveMaxDmg}}</span>
+                        </h4>  
+                    </mat-grid-tile>
+                    
+                    <mat-grid-tile></mat-grid-tile>  <!--  RIGA VUOTA -->
+                    <mat-grid-tile></mat-grid-tile>  <!--  RIGA VUOTA -->
+
+                    
+                    <!--  HEALTH -->
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <img src="https://i.imgur.com/gHJqR9t.png" class=" size-10  mr-1">
+                    </mat-grid-tile>
+                    
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <h4 style="transform: translate(-10px,2px);"> 
+                            <i class="nome" style="color: rgb(169, 250, 64);font-size: 70%;">{{pvePlayer.pveHealth}}</i>
+                        </h4> 
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+
+            <div>
+                <mat-grid-list cols="2" rowHeight="7rem">
+                    @for (troop of pvePlayer.pveTroops; track troop) 
+                    {
+                        <mat-grid-tile>
+                            <app-troop-card [troop]="troop"></app-troop-card>
+                        </mat-grid-tile>
+                    }
+                </mat-grid-list>
+            </div>
+    </div>
+</div>
+}

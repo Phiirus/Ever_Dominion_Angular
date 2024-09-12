@@ -1,0 +1,11 @@
+@if(gear)
+{  
+    <div class="square" [ngStyle]="{'top.px': mouseY, 'left.px': mouseX}">
+        <h1 class="nome testo">{{gear.name}}</h1>
+        <div style="overflow-wrap: break-word;">
+            <h2 class="desc testo">{{gear.description}}</h2>
+            <h4 class="desc testo">Tier: {{gear.tier ? gear.tier : 1}}</h4>
+            <h2 class="desc testo">Price: {{gear.tier ? gear.price*gear.tier : gear.price}}</h2>
+        </div>
+    </div>
+}

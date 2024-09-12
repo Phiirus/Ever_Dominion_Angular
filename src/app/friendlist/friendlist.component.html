@@ -1,0 +1,34 @@
+<div class="container">
+    <!-- PROFILE CARD -->
+    <div>
+        <app-profile-card class="profileCard" [player]="player"></app-profile-card>
+    </div>
+    
+    <!-- SEARCHBAR -->
+    <div class="searchbar">
+        <form class="searchbarInput w-full transform border-b-2 bg-transparent text-2xl duration-300 focus-within:border-blue-300">
+            <input 
+                id="searchbar"
+                type="text" 
+                (input)="filterCriteria()" 
+                placeholder="Cerca il nome di un giocatore" 
+                style="text-align: left; font-style: italic;" 
+                class="w-full border-none bg-transparent outline-none placeholder:italic placeholder:color focus:outline-none">
+        </form>
+        <div class="searchbarBg"></div>
+    </div>
+    
+    <!-- LISTA AMICI -->
+    <div class="friendlist">
+        <div class="friendContainer">
+            <mat-grid-list cols="1" rowHeight="115px">
+                <!-- Usa filteredFriends per mostrare solo i risultati filtrati -->
+                <mat-grid-tile *ngFor="let friend of filteredFriends;">
+                    <app-friend-card [friend]="friend"></app-friend-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+    <div class="pergamena"></div>
+    <div class="friendlistBg"></div>
+</div>

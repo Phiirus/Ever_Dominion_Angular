@@ -1,0 +1,26 @@
+<div class="scatola">
+    @if (visibility) 
+    {
+        <app-fight-result
+        style="position: fixed; transform: translate(0px,6px); z-index: 9999;" [fightRes]="fightRes"></app-fight-result>
+    }
+    <app-player-card [player]="player" 
+                    style="position: fixed; transform: translate(180px,50px);"></app-player-card>
+
+                    <div class="playerDamageReceived" [style.visibility]="playerDamageVisibility">
+                        <img src="https://i.imgur.com/iMpspP6.gif" alt="" style="transform: scale(0.5) translate(-60px,-70px);">
+                        <h2 class="damageText" style="transform: translate(15px,-115px); font-size: 150%;">-{{playerDamageReceived}}</h2>
+                    </div>
+
+    <app-fight-log [results]="results" [player]="player" (fightStart)="beginFight()"
+                    style="position: fixed; transform: translate(980px,380px);"></app-fight-log>
+
+                    <div class="enemyDamageReceived" [style.visibility]="enemyDamageVisibility">
+                        <img src="https://i.imgur.com/iMpspP6.gif" alt="" style="transform: scale(0.5) translate(-60px,-70px);">
+                        <h2 class="damageText" style="transform: translate(15px,-115px); font-size: 150%;">-{{enemyDamageReceived}}</h2>
+                    </div>
+
+    <app-player-card [player]="enemy"
+                style="position: fixed; transform: translate(1400px,50px);"></app-player-card>
+
+</div>

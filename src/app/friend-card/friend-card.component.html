@@ -1,0 +1,35 @@
+@if (friend) 
+{
+<mat-grid-list cols="1" rowHeight="125px">
+    <div class="container">
+        <img [src]="friend.icon" 
+             class="icona rounded-full  h-14 w-14 float-right transition-all ease delay-100 duration-150 hover:-translate-y-0.5 hover:scale-110 z-50">
+
+        <div style="transform: translate(25px);"   >
+            <h2 class="scritte name"> {{friend.nick}} </h2>
+            <h2 class="scritte dmg" style="color: rgb(255, 170, 155);"> {{friend.playerMinDmg}} - {{friend.playerMaxDmg}}</h2>
+            <h2 class="scritte vita"> {{friend.playerHealth}}</h2>
+            <img src="https://i.imgur.com/SrkMwdB.png" class="spada">
+            <img src="https://i.imgur.com/2FDQE3U.png" class="cuore">
+            @if (isOnline())
+            { 
+                <div class="status status-circle-online"></div>
+                <span class="status-text-online">Online</span>
+            }
+            @else
+            {
+                <div class="status status-circle-offline"></div>
+                <span class="status-text-offline">Offline</span>
+            } 
+        </div>
+    </div>
+    <div class="test">
+        <button (click)="removeFriend()" class="rimuoviamico">
+            <img src="https://i.imgur.com/kLFjvIQ.png" class="unfriend">
+        </button>
+        <div class="popup">
+            <h1 class="scritte-popup">Rimuovi amico</h1>
+        </div>
+    </div>
+</mat-grid-list>
+}

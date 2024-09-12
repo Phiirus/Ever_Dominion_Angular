@@ -1,0 +1,50 @@
+@if (troop) 
+{
+    <div class="container  transition-all ease delay-100 duration-500  hover:scale-110 hover:border-6 border-4 bg-transparent h-25 float-left border-black hover:border-amber-600 z-0 hover:z-50 border-solid " 
+        style="border-radius: 15px; border-style: solid;"
+        [style.background-image]="setBackground()">
+        <div class="">
+                <img [src]="setSprite()"
+                class="image rounded-full h-24 w-24 float-left">
+            <!-- text -->
+            <div class=" numeri float-right mt-9 mr-2" style="font-weight: 600; font-size: 90%;"> {{troop.minDamage+"-"+troop.maxDamage}}
+                <br class="numeri" style="background-color: transparent;color: black;font-weight: bold;font-size: 16px;"> 
+                <h2 style="transform: translate(0px,4px);">{{troop.health}}</h2>
+            </div>
+            <!-- imgs -->
+            <div class=" float-right">
+                <img src="https://i.imgur.com/SrkMwdB.png" 
+                        class="icon size-6  mr-0.5" style="margin-top: 2.2rem;">
+                <img src="https://i.imgur.com/2FDQE3U.png" 
+                        class="icon size-5  mr-1" style="margin-top: 3.9rem;">
+            </div>
+        </div>
+    </div>
+}
+@else
+{
+    <div class="container  transition-all ease delay-100 duration-500  hover:scale-110 hover:border-6 border-4 bg-transparent h-25 float-left border-black hover:border-amber-600 z-0 hover:z-50 border-solid " 
+        style="border-radius: 15px; border-style: solid;"
+        [style.background-image]="setBackgroundShop()">
+        <div class="">
+            <img [src]="setSpriteShop()"
+            class="image rounded-full h-24 w-24 float-left">
+             
+                <!-- text -->
+            <div style="transform: translate(-15px);">
+                <div class="numeri float-right mt-9 mr-2" style="font-weight: 600;font-size: 90%;"> {{troopInShop.damage}}
+                    <br class="numeri" style="background-color: transparent;color: black;font-weight: bold;font-size: 16px;"> 
+                    <h2 style="transform: translate(0px,4px);">{{troopInShop.health}}</h2>
+                </div>
+
+                <!-- imgs -->
+                <div class=" float-right">
+                    <img src="https://i.imgur.com/SrkMwdB.png" 
+                            class="icon size-6  mr-0.5" style="margin-top: 2.2rem;">
+                    <img src="https://i.imgur.com/2FDQE3U.png" 
+                            class="icon size-5  mr-1" style="margin-top: 3.9rem;">
+                </div>
+            </div>
+        </div>
+    </div>
+}

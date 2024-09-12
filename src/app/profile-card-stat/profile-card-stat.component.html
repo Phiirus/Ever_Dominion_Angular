@@ -1,0 +1,105 @@
+@if(other)
+{
+    <!-- BOTTONI FIGHT - ADD /REMOVE -->
+    <div style="min-height: 80px; max-height: 80px;">
+    
+        @if (!player.hasShield) 
+        {
+            <button (click)="interact()" style="position: fixed; transform: scale(0.8) translate(25px,5px);">
+                <img src="https://i.imgur.com/tepODep.png" alt="">
+                <h1 class="testo" style="transform: translate(0px,-50px);">ATTACCA</h1>
+            </button>
+        }
+        @else 
+        {
+            <img src="https://i.imgur.com/tepODep.png" alt=""  style="position: fixed;transform: scale(0.8) translate(25px,12px); filter: grayscale(30%) brightness(70%); ">
+            <img src="https://i.imgur.com/Cut151A.png"  class="shield" alt="" style="position: fixed; transform: translate(-50px,-128px) scale(0.12);">
+        }
+
+        @if (friendBoolean)
+        {
+            <button class="addFriend" (click)="addFriend()">
+                <img src="https://i.imgur.com/TpRfPaN.png" alt="" style="transform: scale(1) translate(220px,8px);">
+                <img src="https://i.imgur.com/rg36R4Y.png" alt="" style="z-index: 10; transform: translate(175px,-90px) scale(0.25);">
+            </button>
+        }
+        @else 
+        {
+            <button class="addFriend" (click)="removeFriend()">
+                <img src="https://i.imgur.com/nR89baH.png" alt="" style="transform: scale(1) translate(210px,9px);">
+                <img src="https://i.imgur.com/kLFjvIQ.png" alt="" style="z-index: 10; transform: translate(173px,-97px) scale(0.25);filter: hue-rotate(155deg) saturate(2) contrast(2) brightness(0.8);">
+            </button>
+        }
+    </div>
+}
+@else 
+{
+    <mat-grid-list cols="3" rowHeight="90px" class="stamina">
+        @if (player.stamina>=1) 
+        {
+            <mat-grid-tile>
+                <img class="stamina-icon" src="https://i.imgur.com/ZYi4hIb.png" alt="">
+            </mat-grid-tile>
+        }
+        @else 
+        {
+            <mat-grid-tile>
+                <img class="stamina-icon-bw" src="https://i.imgur.com/6EAhrvU.png" alt="">
+            </mat-grid-tile>
+        }
+        @if (player.stamina>=2) 
+        {
+            <mat-grid-tile>
+                <img class="stamina-icon" src="https://i.imgur.com/ZYi4hIb.png" alt="">
+            </mat-grid-tile>
+        }
+        @else 
+        {
+            <mat-grid-tile>
+                <img class="stamina-icon-bw" src="https://i.imgur.com/6EAhrvU.png" alt="">
+            </mat-grid-tile>
+        }
+        @if (player.stamina>=3) 
+        {
+            <mat-grid-tile>
+                <img class="stamina-icon" src="https://i.imgur.com/ZYi4hIb.png" alt="">
+            </mat-grid-tile>
+        }
+        @else 
+        {
+            <mat-grid-tile>
+                <img class="stamina-icon-bw" src="https://i.imgur.com/6EAhrvU.png" alt="">
+            </mat-grid-tile>
+        }
+    </mat-grid-list>
+}
+<div class="fine-stamina">
+        <img class="img-gold" src="https://i.imgur.com/pdcKGOO.png" alt="">
+        <h1 class="gold ombra"> {{player.gold}} </h1>
+        @if (checkGear("gettone")) 
+        {
+        <h2 class="ombra extragold">{{"+"+checkGear("gettone")?.tier!*5}}</h2>
+        }
+</div>
+
+<div>
+    <img src="https://i.imgur.com/SrkMwdB.png" class="spada size-14 mt-2 mr-0.5" alt="">
+    <h2 class=" ombra mindmg"> {{player.playerMinDmg}}</h2>
+    <h2 class="ombra maxdmg"> {{player.playerMaxDmg}}</h2>
+    @if (checkGear("piuma")) 
+    {
+        <h2 class="ombra extramindmg">{{"+"+checkGear("piuma")?.tier!*2}}</h2>
+    }
+    @if (checkGear("pugnale")) 
+    {
+        <h2 class="ombra extramaxdmg">{{"+"+checkGear("pugnale")?.tier!*4}}</h2>
+    }
+</div>
+<div>
+    <img src="https://i.imgur.com/2FDQE3U.png" class="cuore size-8  mr-1" alt="">
+    <h2 class="ombra vita">{{player.playerHealth}}</h2>
+    @if (checkGear("formaggio")) 
+    {
+        <h2 class="ombra extravita">{{"+"+checkGear("formaggio")?.tier!*10}}</h2>
+    }
+</div>
